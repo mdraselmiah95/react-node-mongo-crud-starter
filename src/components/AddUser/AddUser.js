@@ -6,12 +6,12 @@ const AddUser = () => {
   const handleAddUser = (e) => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
-
     const newUser = { name, email };
-    fetch("http://localhost:3000/users", {
-      method: "POST",
+
+    fetch("http://localhost:5000/users", {
+      method: "post",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(newUser),
     }).then();
