@@ -4,6 +4,17 @@ const AddUser = () => {
   const nameRef = useRef();
   const emailRef = useRef();
   const handleAddUser = (e) => {
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+
+    const newUser = { name, email };
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    }).then();
     e.preventDefault();
   };
   return (
