@@ -11,6 +11,12 @@ const Users = () => {
   return (
     <div>
       <h2>Users Available: {users.length}</h2>
+      {users.map((user) => (
+        <div key={user.id}>
+          <h3>{user.name}</h3>
+          <h5>{user.email}</h5>
+        </div>
+      ))}
     </div>
   );
 };
