@@ -15,7 +15,15 @@ const Users = () => {
     const url = `http://localhost:5000/users/${id}`;
     fetch(url, {
       method: "DELETE",
-    }).then();
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          alert("Deleted successfully");
+          const remainingUser = users.filter((user) => user._id !== id);
+          setUsers(remainingUser);
+        }
+      });
   };
   return (
     <div>
