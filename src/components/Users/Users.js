@@ -11,7 +11,12 @@ const Users = () => {
 
   //DELETE AN USER
 
-  const handleDeleteUser = (id) => {};
+  const handleDeleteUser = (id) => {
+    const url = `http://localhost:5000/users/${id}`;
+    fetch(url, {
+      method: "DELETE",
+    }).then();
+  };
   return (
     <div>
       <h2>Users Available: {users.length}</h2>
