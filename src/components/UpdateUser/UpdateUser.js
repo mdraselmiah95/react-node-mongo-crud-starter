@@ -22,6 +22,8 @@ const UpdateUser = () => {
   };
   const handleEmailChange = (e) => {
     const updatedEmail = e.target.value;
+    // const updatedUser = { ...user };
+    // updatedUser.email=updatedEmail
     const updatedUser = { name: user.name, email: updatedEmail };
     setUser(updatedUser);
   };
