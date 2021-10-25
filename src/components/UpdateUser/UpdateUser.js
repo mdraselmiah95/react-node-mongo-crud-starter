@@ -14,7 +14,9 @@ const UpdateUser = () => {
       });
   }, []);
 
-  const handleUpdateUser = (e) => {};
+  const handleUpdateUser = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
       <h2>Update {user.name}</h2>
