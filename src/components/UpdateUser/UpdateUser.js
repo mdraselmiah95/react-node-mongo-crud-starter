@@ -29,6 +29,14 @@ const UpdateUser = () => {
   };
 
   const handleUpdateUser = (e) => {
+    const url = `http://localhost:5000/users/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
     e.preventDefault();
   };
   return (
