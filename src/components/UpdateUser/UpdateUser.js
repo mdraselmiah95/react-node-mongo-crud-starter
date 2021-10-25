@@ -13,6 +13,14 @@ const UpdateUser = () => {
         setUser(data);
       });
   }, []);
+  //Update user
+
+  const handleNameChange = (e) => {
+    const updateName = e.target.value;
+    const updatedUser = { name: updateName, email: user.email };
+    setUser(updatedUser);
+  };
+  const handleEmailChange = (e) => {};
 
   const handleUpdateUser = (e) => {
     e.preventDefault();
@@ -21,13 +29,20 @@ const UpdateUser = () => {
     <div>
       <h2>Update {user.name}</h2>
       <form onSubmit={handleUpdateUser}>
-        <input type="text" name="" id="" value={user.name} />
+        <input
+          type="text"
+          onChange={handleNameChange}
+          name="name"
+          id=""
+          value={user.name || ""}
+        />
         <input
           type="email"
+          onChange={handleEmailChange}
           name="email"
           placeholder="your email"
           id=""
-          value={user.email}
+          value={user.email || ""}
         />
         <input type="submit" value="Update" />
       </form>
