@@ -31,7 +31,8 @@ const UpdateUser = () => {
   };
   return (
     <div>
-      <h2>Update {user.name}</h2>
+      <h2>Update Name: {user.name}</h2>
+      <h2>Update Email: {user.email}</h2>
       <form onSubmit={handleUpdateUser}>
         <input
           type="text"
