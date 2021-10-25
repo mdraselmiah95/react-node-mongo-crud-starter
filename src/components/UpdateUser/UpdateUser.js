@@ -16,6 +16,11 @@ const UpdateUser = () => {
   return (
     <div>
       <h2>Update {user.name}</h2>
+      <form onSubmit={ }>
+        <input type="text" name="" id="" />
+        <input type="email" name="email" placeholder="your email" id="" />
+        <input type="submit" value="Update" />
+      </form>
     </div>
   );
 };
