@@ -36,7 +36,11 @@ const UpdateUser = () => {
         "content-type": "application/json",
       },
       body: JSON.stringify(user),
-    }).then();
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
     e.preventDefault();
   };
   return (
