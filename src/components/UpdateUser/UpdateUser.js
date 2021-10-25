@@ -19,8 +19,14 @@ const UpdateUser = () => {
     <div>
       <h2>Update {user.name}</h2>
       <form onSubmit={handleUpdateUser}>
-        <input type="text" name="" id="" />
-        <input type="email" name="email" placeholder="your email" id="" />
+        <input type="text" name="" id="" value={user.name} />
+        <input
+          type="email"
+          name="email"
+          placeholder="your email"
+          id=""
+          value={user.email}
+        />
         <input type="submit" value="Update" />
       </form>
     </div>
