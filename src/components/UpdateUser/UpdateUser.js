@@ -13,10 +13,12 @@ const UpdateUser = () => {
         setUser(data);
       });
   }, []);
+
+  const handleUpdateUser = (e) => {};
   return (
     <div>
       <h2>Update {user.name}</h2>
-      <form onSubmit={ }>
+      <form onSubmit={handleUpdateUser}>
         <input type="text" name="" id="" />
         <input type="email" name="email" placeholder="your email" id="" />
         <input type="submit" value="Update" />
