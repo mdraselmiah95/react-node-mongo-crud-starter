@@ -41,6 +41,7 @@ const UpdateUser = () => {
       .then((data) => {
         if (data.modifiedCount > 0) {
           alert("Updated Successfully");
+          setUser({});
         }
       });
     e.preventDefault();
